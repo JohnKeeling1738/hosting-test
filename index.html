@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible"
+		content="IE=edge" />
+	<meta name="viewport" content=
+		"width=device-width, initial-scale=1.0" />
+	<title>Video Stream</title>
+	<script>
+		var idToken = null
+		function checkLogin(){
+			var url_string = window.location.href;
+			var url = new URL(url_string)
+			idToken = url.searchParams.get('id_token');
+			
+			
+			console.log(idToken)
+		}
+	</script>
+</head>
+
+<body onload = "checkLogin()">
+	
+	<a href ="https://tb71.auth.us-east-1.amazoncognito.com/login?client_id=6vt87nsjdjhmmpsqnen202mpe0&response_type=token&scope=aws.cognito.signin.user.admin+email+openid+phone+profile&redirect_uri=http://localhost:3000/" >Login</a>
+	hello  World
+	<p >yo</p>
+</body>
+
+</html>
