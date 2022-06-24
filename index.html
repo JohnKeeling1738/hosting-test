@@ -11,12 +11,17 @@
 	<script>
 		var idToken = null
 		function checkLogin(){
+			let url = window.location.href
+			const myArray = url.split('&')
+			let word = myArray[1]
+			const final = word.split('=')
+			idToken = console.log(final[1])
 // 			var url_string = window.location.href;
 // 			var url = new URL(url_string)
 // 			idToken = url.searchParams.get('id_token');
 			
 			
-			console.log("This works?!?")
+			console.log(idToken)
 		}
 	</script>
 </head>
