@@ -16,12 +16,9 @@
 			let word = myArray[1]
 			const final = word.split('=')
 			idToken = final[1]
-// 			var url_string = window.location.href;
-// 			var url = new URL(url_string)
-// 			idToken = url.searchParams.get('id_token');
-			
-			
-			console.log(idToken)
+			const dict = {"accessToken":idToken}
+			const s = JSON.stringify(dict)
+			console.log(s)
 		}
 	</script>
 </head>
